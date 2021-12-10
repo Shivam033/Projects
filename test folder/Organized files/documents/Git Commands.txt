@@ -1,0 +1,66 @@
+Git:
+	Version Control System: It developled to co-ordinate the work among the developers
+	
+Git Command:
+
+	1) git --version
+	2) git config --global user.name "neha" -> set username
+	3) git config --global user.email "nehagaud01@gmail.com" -> set email
+	4) git config --list -> show all list which u update 
+	5) ls -> show list of files
+	6) git init -> initialise git
+	7) git add file_name -> add file which will be committed 
+							if there are files present in our folder and ther are not git add then it shows untracked file so first we have to add them through git add before commit
+	8) git commit -m "comment" -> use to add file in main branch 
+	9) git add -A -> use to add all file available is folder
+	10) git status -> show status of branch file
+	11) git diff -> shows changes which are done in any file before add command before staged  area
+	12) git diff --staged -> show changes which is add in the stating are after git add command
+	13) git diff HEAD-> track changes after commit command
+	14) git show -> show changes details
+	15) git log -> show complete details of branch
+	16) git log --stat -> show which file is modified
+	
+	Note : stating area - after apply git add command  and before git commit file comes in staging area 
+	
+	17) git rm -f file_name -> it will delete our file completely
+	18) git rm --cached file_name -> it will remove our file from staging area
+	
+	Note : by default we are on master branch, we can create another branch for this master branch(basically its a copy of main brach having all the files of master branch) but if we do any changes in new branch it will not effect master branch if we want to do changes without effect master branch
+		   we can merge all the copy branch with master branch 
+	19) git branch --list -> show list of all branch are there
+	20) git branch <branch_name> -> generate new branch
+	21) git checkout <branch_name> -> switch from one branch to another branch
+	                                which branch is currently active while making new brach then the new branch is the copy or child branch of that currently active branch
+	22) git branch -D <branch_name> -> detele branch without merge also
+	23) git branch -d <bracnh_name> -> delete branch after merge
+	24) git merge <branch_name> -> merge with the active file
+	25) git checkout -b <branch_name> -> it will create new branch and switch into this branch
+	26) git commit -am "comment" -> do add and commit simaltaneously
+	27) git remote add origin repo_url-> it will add that repository in which we want to push our branch remotely
+	28) git remote -v -> show which url is active
+	29) 27) git push -u origin branch_name -> upload the content from local repository to the remote repository
+	30) git pull -> fetch and download content from a remote repository
+	31) git branch -m <branch_name> -> rename the current branch to <branch_name>
+
+	
+	
+	
+	
+Important Terminology:
+	1)Branch:repository diverges from main working directory 
+				-> 	main working directory  se hi nikli hui repository ( eg child repository where as parent repository is main branch)
+	2)Checkout:it is used for the act of switching between different versions of target entity
+				 -> means ek branch se dusri branch pe move krna ho toh checkout use karege
+	3)Clone:making copy from the server
+	4)Merge:combine branches
+	5)Origin:remote repository from project was initially cloned
+	6)Pull:receive the data from server(GITHUB)
+	7)Push:upload local repository to server
+	8)Git Ignore:use for intentionally untrack the fine
+	9)Git Diff: shows changes between commit,working tree etc
+	10)Git Rm: remove file
+	
+
+
+	
