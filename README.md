@@ -17,6 +17,7 @@ This repo will also contain some exciting projects which i'll be doing throughou
 - Open board <br/>
 and many more... ✨✨ <br/>
 
-## How to reach me 
-- GMail - shivvam029@gmail.com
-- www.linkedin.com/in/shivam-sharma-3b6345152
+## How to reach me 📫 
+- [Gmail](shivvam029@gmail.com)
+- [LinkedIn](www.linkedin.com/in/shivam-sharma-3b6345152)
+- [Instagram](https://www.instagram.com/shivam_029/)
