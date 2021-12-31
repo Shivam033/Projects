@@ -16,3 +16,7 @@ This repo will also contain some exciting projects which i'll be doing throughou
 - Google Docs clon <br/>
 - Open board <br/>
 and many more... ✨✨ <br/>
+
+## How to reach me 
+- GMail - shivvam029@gmail.com
+- www.linkedin.com/in/shivam-sharma-3b6345152
