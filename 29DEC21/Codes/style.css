@@ -11,6 +11,27 @@
     /* background-color: red; */
     transform: scale(1.02);
 }
+
+#divBreadCrumb{
+    border: 1px solid black;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.path {
+    cursor: pointer;
+    background-color: grey;
+    color: black;
+    padding: 10px;
+    border-right: 3px solid black;
+}
+.path:hover{
+    background-color: white;
+    color: blue;
+    text-decoration: underline;
+}
+
 #container{
     border: 1px solid black;
     padding: 10px;

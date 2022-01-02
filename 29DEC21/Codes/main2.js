@@ -2,11 +2,33 @@
     let btnAddFolder = document.querySelector("#btn1");
     let divContainer = document.querySelector("#container");
     let pageTemplates = document.querySelector("#myTemplates");
+    let divBreadCrumb = document.querySelector("#divBreadCrumb");
     let folders = [];
     let fid = -1;
+    let cfid = -1; // id of the folder in which we are right now
 
     btnAddFolder.addEventListener("click", addFolder);
 
+    function navigateBreadCrumb(){
+        
+    }
+    function viewFolder(){
+        
+        let divFolder = this.parentNode;
+        let divName = divFolder.querySelector("[purpose = 'name']");
+        cfid = parseInt(divFolder.getAttribute("fid"));
+
+        let aPathTemplate = pageTemplates.content.querySelector(".path");
+        let aPath = document.importNode(aPathTemplate, true);
+
+        aPathTemplate.innerHTML = divName.innerHTML;
+        divBreadCrumb.appendChild(aPath);
+
+        divContainer.innerHTML = "";
+        folders.filter(f => f.pid == cfid).forEach(f => {
+            addFolderHTML(f.name, f.id, f.pid);
+        })
+    }
     function addFolder(){
         let fname = prompt("Enter folder's name");
         if(!!fname){
@@ -85,11 +107,13 @@
         let divName = divFolder.querySelector("[purpose='name']");
         let spanEdit = divFolder.querySelector("[action = 'edit']");
         let spanDelete = divFolder.querySelector("[action = 'delete']");
+        let spanView = divFolder.querySelector("[action = 'view']");
 
         divFolder.setAttribute("fid", fid);
         divName.innerHTML = fname;
         spanEdit.addEventListener("click", editFolder);
         spanDelete.addEventListener("click", deleteFolder);
+        spanView.addEventListener("click", viewFolder);
 
         divContainer.appendChild(divFolder);
     }
@@ -107,7 +131,10 @@
                 if(f.id > fid){
                     fid = f.id;
                 }
-                addFolderHTML(f.name, f.id) });
+                if(f.pid == cfid){
+                    addFolderHTML(f.name, f.id)    
+                }
+            });
         }
     }
 

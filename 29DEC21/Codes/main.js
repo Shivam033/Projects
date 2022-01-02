@@ -5,6 +5,7 @@
     let btn = document.querySelector("#btn1") //# is used when id is provided
     let divContainer = document.querySelector('#container');
     let pageTemplates = document.querySelector("#myTemplates");
+    let divBreadCrumb = document.querySelector("#divBreadCrumb");
     let fid = 0;
     let folders = []; //for local storage
 
