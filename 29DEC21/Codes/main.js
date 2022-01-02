@@ -79,8 +79,8 @@
 
     function loadFoldersFromStorage(){
         let fjson = localStorage.getItem("data");
-        if(!!fjson){
-            folders = JSON.parse(fjson);
+        if(!!fjson){ // to check if string if not empty
+            folders = JSON.parse(fjson); // String to JS object
 
             folders.forEach(function(f){
                 addFolderInPage(f.name, f.id);
