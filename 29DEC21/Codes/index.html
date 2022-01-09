@@ -1,27 +1,35 @@
 <html>
     <head>
-        <title>My first hand at html</title>
-        <link rel ="stylesheet" href="style.css" />
+        <title>My first hands on frontend</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- rel is an attribute -->
     </head>
+
     <body>
-        <!-- <h1>My first hands at frontend in HTML-CSS-JS</h1> -->
-        <button id = "btn1">New Folder</button>
-        <div id = "divBreadCrumb">
-            <a class= "path" fid="-1">Root</a>
+        <button id="btnAddFolder">Add Folder</button>
+        <button id="btnAddFile">Add File</button>
+        <hr/>
+        <div id="divBreadCrumb">
+            <a class="path" fid="-1">Root<i class = "arrow right"></i></a>
         </div>
-        <div id="container">
+        <hr/>
+        <div id="divContainer">
+            <!-- container of files and folders -->
         </div>
-        <template id="myTemplates">
-            <!-- template is a code which we will be using in a later stage of our file -->
+        <div id="app">
+            <!-- popup of apps -->
+        </div>
+         <template id="pageTemplates"> 
+             <!--temp is used for elements which will form after some action is performed -->
             <div class="folder">
-                <span action="edit">edit</span>
-                <span action="delete">delete</span>
-                <span action="view">view</span>
+                <span action="edit">Edit</span>
+                <span action="delete">Delete</span>
+                <span action="view">View</span>
                 <div purpose="name"></div>
             </div>
             <a class="path"></a>
         </template>
-
-        <script type="text/javascript" src="main2.js"></script>
+        <hr/>
+        <script type="text/javascript" src="main.js"></script>
     </body>
 </html>

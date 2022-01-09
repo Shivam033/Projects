@@ -1,55 +1,96 @@
-#btn1{
-    background-color: blueviolet;
-    color: white;
-    width: 200px;
-    margin-left : 200px;
-    padding: 20px;
-    cursor: pointer;
-    
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;;
 }
-#btn1:hover{
-    /* background-color: red; */
-    transform: scale(1.02);
+#btnAddFolder {
+    border-radius: 20px;
+    background-color: azure;
+    width: 100px;
+    margin-left: 20px;
+    text-align : center;
+    padding: 10px;
+    cursor: pointer;
+}
+#btnAddFile {
+    border-radius: 20px;
+    background-color: azure;
+    width: 100px;
+    margin-left: 40px;
+    padding: 10px;
+    cursor: pointer;
 }
 
-#divBreadCrumb{
-    border: 1px solid black;
+#btnAddFolder:hover {
+    transform: scale(1.1);
+    background-color: rgb(177, 219, 255);
+}
+#btnAddFile:hover {
+    transform: scale(1.1);
+    background-color: rgb(177, 219, 255);
+}
+
+#divBreadCrumb {
+    /* border: 1px solid black; */
     display: flex;
+    margin-left: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .path {
     cursor: pointer;
-    background-color: grey;
+    border-radius: 15px;
+    background-color:  rgb(199, 208, 211);
     color: black;
     padding: 10px;
-    border-right: 3px solid black;
-}
-.path:hover{
-    background-color: white;
-    color: blue;
-    text-decoration: underline;
+    border-right: 3px solid white;
 }
 
-#container{
-    border: 1px solid black;
-    padding: 10px;
+.path:hover{
+    background-color: rgb(35, 216, 204);
+    /* color: blue; */
+    text-decoration:solid;
+}
+
+#divContainer {
+    /* border: 1px solid black; */
+    display: flex; /* for displaying side by side*/
     margin-top: 10px;
-    display: flex; /* to get new folders side by side*/
 }
+
 .folder {
-    background-color: antiquewhite;
-    border-radius: 10px;
+    background-color: rgb(100, 117, 212);
+    border-radius: 15px;
     height: 50px;
-    width: 100px;
-    margin: 5px;
-    text-align: center;
+    width: 140px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 20px;
 }
-.folder [action]{
+
+.folder:hover{
+    box-shadow: 5px 5px 9px 0;
+    /* box-shadow: inset 0px 5px 9px 0; */
+}
+.folder [action]:hover{
     text-decoration: underline;
+    color:darkred;
     cursor: pointer;
 }
+
 div[purpose=name]{
-    margin-top: 5px;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+  
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
 }
