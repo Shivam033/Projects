@@ -1,5 +1,5 @@
 // IIFE to prevent namespace pollution
-// no to varialbes of different js files should collide
+// no two varialbes of different js files should collide
 
 (function () {
     let btnAddFolder = document.querySelector("#btnAddFolder");
@@ -23,6 +23,7 @@
     function addFolder() {
         let fname = prompt("Enter folder's name");
         if (!!fname) {
+            fname = fname.trim();
             let exists = folders.some(f => f.name == fname);
             if (exists == false) {
                 fid++;
@@ -33,10 +34,10 @@
                 });
                 addFolderHTML(fname, fid, cfid);
                 saveToStorage();
-            } else {
+            } else { //unique name validadion
                 alert(fname + " already exists");
             }
-        } else {
+        } else { // non empty name validation
             alert("Please enter a name");
         }
     }
@@ -64,7 +65,7 @@
                     alert(nfname + " already exists");
                 }
             } else {
-                alert("This is the old name only. Please enter something new.");
+                alert("This is the old name. Please enter something new.");
             }
         } else {
             alert("Please enter a name");
@@ -159,7 +160,8 @@
     }
 
     function saveToStorage() {
-        let fjson = JSON.stringify(folders);
+        let fjson = JSON.stringify(folders); 
+        // used to convert js obj to a json string which can be saved
         localStorage.setItem("data", fjson);
     }
 
